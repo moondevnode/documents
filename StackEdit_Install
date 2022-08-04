@@ -1,0 +1,40 @@
+## StackEdit 설치
+
+1. stackedit.io
+  - google drive 연동
+
+2. google drive
+  - 새로 만들기 > 더보기 > 연결할 앱 더보기
+  - app 검색 > stackedit
+  - stackedit 설치 
+
+3. markdown file 생성
+  - googledrive > 새로 만들기 > StackEdit
+  - 파일 저장
+
+4. github 연동
+- colab
+```
+# mount
+from google.colab import drive
+drive.mount('/content/drive')
+
+# clone
+```bash
+%cd /content/drive/MyDrive/Github # change directory /content/drive/MyDrive/<user_path>
+!git clone https://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@github.com/moondevnode/documents.git
+
+# config
+!git config --global url."https://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@github.com/moondevnode".insteadOf "https://github.com/moondevnode"
+!git config --global user.name "moondevnode"
+!git config --global user.email moondevnode@gmail.com
+
+# git push
+%cd /content/drive/MyDrive/Github/documents
+!git add .
+!git commit -m "test"
+!git push https://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@github.com/moondevnode/documents.git
+```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE1MDAyNDU4NjQsNzMwOTk4MTE2XX0=
+-->
